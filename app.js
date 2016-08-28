@@ -8,11 +8,11 @@
     var methodOverride = require('method-override'); // Simulate PUT and DELETE (express4)
     var addresses = ["Tokyo"]; //weather location
     var http = require( 'http' );
-    app.set( 'port', process.env.PORT || 3001 );
+    //app.set( 'port', process.env.PORT || 3001 );
     
-    http.createServer( app ).listen( app.get( 'port' ), function (){
-        console.log( 'Express server listening on port ' + app.get( 'port' ));
-    });
+    //http.createServer( app ).listen( app.get( 'port' ), function (){
+    //    console.log( 'Express server listening on port ' + app.get( 'port' ));
+    //});
     
     // To config =================
     mongoose.connect('mongodb://localhost/test');     // To connect mongodb database on modulus.io
