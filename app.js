@@ -8,7 +8,6 @@
     var methodOverride = require('method-override'); // Simulate PUT and DELETE (express4)
     var addresses = ["Tokyo"]; //weather location
     var http = require( 'http' );
-    
     app.set( 'port', process.env.PORT || 3001 );
     
     http.createServer( app ).listen( app.get( 'port' ), function (){

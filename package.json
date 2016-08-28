@@ -1,16 +1,18 @@
 {
-  "name": "assignment2"
+  "name": "assignment2",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.12.4"
+    "express": "^4.12.4",
+    "body-parser": "^1.13.3",
+    "mongodb": "^2.1.6",
+    "morgan": "^1.0.0",
+    "mongoose": "^1.0.0"
   },
-  "description": "assignment2",
+  "description": "terry choi assignment2",
   "main": "app.js",
   "author": "terrychoi",
   "license": "MIT"
-  }
 }
