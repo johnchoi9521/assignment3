@@ -5,11 +5,14 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.12.4",
-    "body-parser": "^1.13.3",
-    "mongodb": "^2.1.6",
-    "morgan": "^1.0.0",
-    "mongoose": "^1.0.0"
+    "async": "^0.2.10",
+    "express": "^3.2.6",
+    "body-parser": "^1.15.2",
+    "morgan": "^1.7.0",
+    "mongoose": "^4.5.9",
+    "method-override": "^2.3.6",
+    "request": "^2.74.0",
+    "socket.io": "^0.9.17"
   },
   "description": "terry choi assignment2",
   "main": "app.js",
