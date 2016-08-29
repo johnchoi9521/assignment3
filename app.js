@@ -15,7 +15,7 @@
     //});
     
     // To config =================
-    mongoose.connect('mongodb://localhost/test');     // To connect mongodb database on modulus.io
+    mongoose.connect('mongodb://admin:admin@ds017886.mlab.com:17886/johnchoi9521');  // To connect mongodb database on modulus.io
 
     app.use(morgan('dev'));                                         // To log all of the request to the console
     app.use(bodyParser.urlencoded({'extended':'true'}));            // To analyze application/x-www-form-urlencoded
