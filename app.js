@@ -6,7 +6,7 @@
     var morgan = require('morgan');             // Request log to the console (express4)
     var mongoose = require('mongoose');         // mongoose for mongodb
     var methodOverride = require('method-override'); // Simulate PUT and DELETE (express4)
-    var addresses = ["Tokyo"]; //weather location
+    var addresses = []; //weather location
     var http = require( 'http' );
     //app.set( 'port', process.env.PORT || 3001 );
     
@@ -16,12 +16,12 @@
     
     // To config =================
     mongoose.connect('mongodb://admin:admin@ds017886.mlab.com:17886/johnchoi9521');  // To connect mongodb database on modulus.io
-
+    app.use(express.static(__dirname + '/public'));
     app.use(morgan('dev'));                                         // To log all of the request to the console
     app.use(bodyParser.urlencoded({'extended':'true'}));            // To analyze application/x-www-form-urlencoded
     app.use(bodyParser.json());                                     // To analyze application/json
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // To analyze application/vnd.api+json as json
-    app.use(methodOverride());
+    app.use(methodOverride());  
 
 
 
@@ -107,7 +107,8 @@
     var request = require('request');
     var async = require('async');
 
-    app.get('/api/getweather', function(req, res){
+    app.get('/api/getweather/:city_name', function(req, res){
+        addresses[0] = req.params.city_name
         async.concat (addresses, handleGetWeatherRequest, function(err, result) {
             if (err) {
                 console.error(err);
@@ -133,5 +134,12 @@
             }
         });
     }
+    
+    app.get('*', function(req, res) 
+    {
+
+        res.sendfile('./public/index.html');
+
+    });
     
 app.listen(process.env.PORT);
